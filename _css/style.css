@@ -1,0 +1,182 @@
+@font-face {
+    font-family: MyFont;
+    src: url(../_fonts/CodeDemo-Bold.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: MyFont;
+}
+
+html, body{
+    height: 100%;
+}
+
+.clear{
+    clear: both;
+}
+
+.center-1{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* INICIO SITE */
+header{
+    display: flex;
+}
+
+.menu-mobile{
+    width: 100%;
+    height: 80px;
+    background-color: #02d607;
+    display: none;
+}
+
+.menu-mobile li{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.menu-mobile a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.logomarca{
+    max-width: 100px;
+    position: absolute;
+    left: 200px;
+    padding: 0 2%;
+}
+
+.logomarca img{
+    width: 110px;
+}
+
+.menu-desktop{
+    width: 75%;
+    height: 80px;
+    background-color: #02d607;
+    text-align: right;
+}
+
+.menu-desktop li{
+    display: inline-block;
+    list-style: none;
+    margin: 29px 0;
+    padding: 0 20px;
+}
+
+.menu-desktop a{
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #000000;
+    padding: 20px 0;
+}
+
+.menu-desktop a:hover{
+    width: 100%;
+    color: #ffffff;
+    border-bottom: #ffffff solid 2px;
+    transition: 0.5s;
+}
+
+.apoio{
+    width: 25%;
+    height: 80px;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.apoio .borda{
+    max-width: 200px;
+    border: 2px solid #ffffff;
+    margin: 15px 0 0 18px;
+    padding: 15px 5px;
+}
+
+.apoio p{
+    color: #ffffff;
+    font-size: 1em;
+    text-align: center;
+}
+
+.borda:hover{
+    transition: 1s;
+    background-color: #ffffff;
+}
+
+.borda:hover p{
+    transition: 1s;
+    color: #000000;
+}
+
+/* BANNER */
+
+.banner{
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .textos-banner{
+    position: absolute;
+    text-align: left;
+}
+
+.banner .textos-banner h1{
+    font-size: 5em;
+    position: relative;
+    top: -62px;
+    color: white;
+    text-shadow: 3px 3px 1px black;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 1047px) {
+    .logomarca{
+        max-width: 100px;
+        position: absolute;
+        left: 100px;
+        padding: 0 2%;
+    }  
+}
+
+@media screen and (max-width: 907px) {
+    .logomarca{
+        max-width: 100px;
+        position: absolute;
+        left: 50px;
+        padding: 0 2%;
+    }  
+}
+
+@media screen and (max-width: 860px) {
+    .apoio{
+        display: none;
+    }
+
+    .menu-desktop{
+        display: none;
+    }
+
+    .menu-mobile{
+        display: block;
+    }
+
+    .menu-mobile li{
+        display: block;
+    }
+}
